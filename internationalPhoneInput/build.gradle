@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.googlecode.libphonenumber:libphonenumber:8.2.0'
+    provided 'com.android.support:support-annotations:23.2.1'
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:recyclerview-v7:26.0.2'
+//    compile 'com.univocity:univocity-parsers:2.1.0'
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'Widget'
+
+    publishedGroupId = 'com.lovearthstudio.android'
+
+    libraryName = 'InternationalPhoneInput'
+    artifact = 'InternationalPhoneInput'
+
+    libraryDescription = 'modify error if get line1number'
+
+    siteUrl = 'https://github.com/lovearthhome/DuaSDKDemo'
+    gitUrl = 'https://github.com/lovearthhome/DuaSDKDemo.git'
+
+    libraryVersion = '0.0.10'
+
+    developerId = 'Mingyu Yi'
+    developerName = 'Mingyu Yi'
+    developerEmail = '461072496@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

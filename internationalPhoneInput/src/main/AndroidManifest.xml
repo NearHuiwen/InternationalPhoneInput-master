@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yimingyu.android.ui.phoneinput">
+
+    <application
+        android:allowBackup="true">
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden"
+            android:name="com.yimingyu.android.ui.phoneinput.CountrySelectorActivity">
+        </activity>
+    </application>
+
+</manifest>
